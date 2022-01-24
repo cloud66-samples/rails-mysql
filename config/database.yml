@@ -49,7 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['MYSQL_DATABASE'] %>
+  database: should_be_this_name
   username: <%= ENV['MYSQL_USERNAME'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
   host: <%= ENV['MYSQL_ADDRESS'] || ENV['MYSQL_HOST'] %>
