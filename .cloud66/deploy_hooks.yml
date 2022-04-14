@@ -1,0 +1,6 @@
+production:
+  after_symlink:
+    - command: ls -al $STACK_BASE/releases | tee /tmp/releases_permissions
+      target: rails
+      run_on: all_servers
+      sudo: true
