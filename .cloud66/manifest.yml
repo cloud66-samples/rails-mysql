@@ -1,3 +1,5 @@
 rails:
   configuration:
     ruby_version: "2.7.4"
+    firewall:
+      close_extra_web_ports: true
