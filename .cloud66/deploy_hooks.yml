@@ -1,0 +1,10 @@
+shared_hook: &shared_hook
+  first_thing:
+  - command: bash -c "ls -la /"
+    target: any
+    execute: true
+
+production:
+  <<: *shared_hook
+development:
+  <<: *shared_hook
