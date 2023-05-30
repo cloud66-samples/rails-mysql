@@ -1,6 +1,8 @@
 task :before_assets_precompile do
   # run a command which starts your packaging
-  Rails.logger.info("OMFG running asset precompile!!!")
+  message = "OMFG running asset precompile!!!"
+  Rails.logger.info(message)
+  puts message
 end
 
 # every time you execute 'rake assets:precompile'
