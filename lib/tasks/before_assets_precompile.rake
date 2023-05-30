@@ -4,10 +4,12 @@ task :before_assets_precompile do
   Rails.logger.info(message)
   puts message
   
-  error_message = "HAHAHA OOPSIE FAILIE U NO GET THIS"
-  Rails.logger.info(error_message)
-  puts error_message
-  raise "LOL LMAO"
+  if ENV["FAIL_COMPILATION"] == "true"
+    error_message = "HAHAHA OOPSIE FAILIE U NO GET THIS"
+    Rails.logger.info(error_message)
+    puts error_message
+    raise "LOL LMAO"
+  end
 end
 
 # every time you execute 'rake assets:precompile'
