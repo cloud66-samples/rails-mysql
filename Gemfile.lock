@@ -77,6 +77,9 @@ GEM
     crass (1.0.6)
     delayed_job (4.1.11)
       activesupport (>= 3.0, < 8.0)
+    delayed_job_active_record (4.1.7)
+      activerecord (>= 3.0, < 8.0)
+      delayed_job (>= 3.0, < 5)
     erubi (1.10.0)
     ffi (1.15.4)
     globalid (0.5.2)
@@ -229,6 +232,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   delayed_job (~> 4.1)
+  delayed_job_active_record (~> 4.1)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mysql2 (~> 0.5.3)

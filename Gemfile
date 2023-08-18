@@ -54,4 +54,6 @@ gem "sidekiq", "~> 6.5"
 
 gem "resque", "~> 2.5"
 
+gem "delayed_job_active_record", "~> 4.1"
+
 gem "delayed_job", "~> 4.1"
