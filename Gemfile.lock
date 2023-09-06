@@ -80,6 +80,11 @@ GEM
     delayed_job_active_record (4.1.7)
       activerecord (>= 3.0, < 8.0)
       delayed_job (>= 3.0, < 5)
+    delayed_job_web (1.4.4)
+      activerecord (> 3.0.0)
+      delayed_job (> 2.0.3)
+      rack-protection (>= 1.5.5)
+      sinatra (>= 1.4.4)
     erubi (1.10.0)
     ffi (1.15.4)
     globalid (0.5.2)
@@ -222,6 +227,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yard (0.9.34)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -233,6 +239,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   delayed_job (~> 4.1)
   delayed_job_active_record (~> 4.1)
+  delayed_job_web (~> 1.4, >= 1.4.4)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mysql2 (~> 0.5.3)
@@ -249,6 +256,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
+  yard (~> 0.9.34)
 
 BUNDLED WITH
    2.1.4
