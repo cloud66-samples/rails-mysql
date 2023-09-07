@@ -3,5 +3,8 @@ class ResqueJob
 
   def self.perform
     puts "Running inside resque!"
+    puts "Sleeping for 30 seconds"
+    sleep 30
+    puts "Done sleeping"
   end
 end

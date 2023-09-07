@@ -4,5 +4,8 @@ class SidekiqJob
 
   def perform
     puts "Running inside Sidekiq!"
+    puts "Sleeping for 30 seconds"
+    sleep 30
+    puts "Done sleeping"
   end
 end
