@@ -60,3 +60,5 @@ gem "resque", "~> 2.5"
 gem "delayed_job_active_record", "~> 4.1"
 
 gem "delayed_job", "~> 4.1"
+
+gem "cloud66_metrics", path: "/Users/dima/programming/cloud66/cloud66_metrics"
