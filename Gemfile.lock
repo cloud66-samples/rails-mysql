@@ -80,6 +80,7 @@ GEM
     concurrent-ruby (1.1.9)
     connection_pool (2.3.0)
     crass (1.0.6)
+    daemons (1.4.1)
     delayed_job (4.1.11)
       activesupport (>= 3.0, < 8.0)
     delayed_job_active_record (4.1.7)
@@ -243,6 +244,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   cloud66_metrics!
+  daemons (~> 1.4, >= 1.4.1)
   delayed_job (~> 4.1)
   delayed_job_active_record (~> 4.1)
   delayed_job_web (~> 1.4, >= 1.4.4)
