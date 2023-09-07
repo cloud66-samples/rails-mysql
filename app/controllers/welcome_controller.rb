@@ -2,6 +2,6 @@ class WelcomeController < ApplicationController
   def index
     SidekiqJob.perform_async
     DelayedJobHighJob.new.deliver
-    Resque.enqueue(ResqueJob)
+    Resque.enqueue(ResqueHighJob)
   end
 end
