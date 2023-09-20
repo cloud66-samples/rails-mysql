@@ -9,6 +9,4 @@ Rails.application.routes.draw do
         match "/delayed_job" => DelayedJobWeb, :anchor => false, :via => [:get, :post]
 
         mount Sidekiq::Web => "sidekiq"
-
-        mount Cloud66Metrics::Engine => "/cloud66"
 end
