@@ -65,4 +65,4 @@ gem "delayed_job", "~> 4.1"
 
 gem "pry"
 
-gem "cloud66", "0.1.0", git: "https://github.com/DimitriosLisenko/cloud66_gem.git", branch: "master"
+gem "cloud66", "0.1.1", git: "https://github.com/DimitriosLisenko/cloud66_gem.git", branch: "master"

@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/DimitriosLisenko/cloud66_gem.git
-  revision: e3ebf3d2fa2b7d90473208b366ae54ff9ed3a60f
+  revision: 234d88e88a398c4b9a7fe4a63109708231e118b5
   branch: master
   specs:
-    cloud66 (0.1.0)
+    cloud66 (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -249,7 +249,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  cloud66 (= 0.1.0)!
+  cloud66 (= 0.1.1)!
   daemons (~> 1.4, >= 1.4.1)
   delayed_job (~> 4.1)
   delayed_job_active_record (~> 4.1)
