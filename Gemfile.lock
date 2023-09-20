@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/cloud66/cloud66_gem.git
+  remote: https://github.com/DimitriosLisenko/cloud66_gem.git
   revision: e3ebf3d2fa2b7d90473208b366ae54ff9ed3a60f
   branch: master
   specs:
