@@ -63,4 +63,6 @@ gem "delayed_job_active_record", "~> 4.1"
 
 gem "delayed_job", "~> 4.1"
 
-gem "cloud66_metrics", path: "/Users/dima/programming/cloud66/cloud66_metrics"
+gem "pry"
+
+gem "cloud66", "0.1.0", git: "https://github.com/cloud66/cloud66_gem.git", branch: "master"
