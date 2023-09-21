@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
     sidekiq_class_from_queue(random_queue).perform_async
     delayed_job_class_from_queue(random_queue).new.deliver
     Resque.enqueue(resque_class_from_queue(random_queue))
+    publish_empty_hash_to_sneakers(random_queue)
   end
 
   private
@@ -48,5 +49,14 @@ class WelcomeController < ApplicationController
     else
       raise ::ArgumentError.new("Unknown queue #{queue}")
     end
+  end
+
+  def publish_empty_hash_to_sneakers(queue)
+    conn = Bunny.new
+    conn.start
+    ch = conn.create_channel
+    ch.default_exchange.publish({}.to_json, routing_key: queue)
+    ch.close
+    conn.close
   end
 end
