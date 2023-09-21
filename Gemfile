@@ -66,3 +66,9 @@ gem "delayed_job", "~> 4.1"
 gem "pry"
 
 gem "cloud66", "0.1.2", git: "https://github.com/DimitriosLisenko/cloud66_gem.git", branch: "master"
+
+gem "sneakers", "~> 2.12"
+gem "bunny", "~> 2.22"
+
+# both sneakers and sass-rails depend on rake, choose a version that is compatible with both
+gem "rake", "~> 12.3", ">= 12.3.3"
