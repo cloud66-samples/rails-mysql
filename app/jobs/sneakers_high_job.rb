@@ -1,6 +1,6 @@
 class SneakersHighJob
   include Sneakers::Worker
-  from_queue "high"
+  from_queue "high", prefetch: 1, threads: 1
 
   def work(msg)
     puts "Running inside sneakers - high queue!"
