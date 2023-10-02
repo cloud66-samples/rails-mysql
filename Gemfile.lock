@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/cloud66-samples/cloud66_gem.git
-  revision: 0545f1816ff199d38a15f434df32f9aeb7bbe56c
-  branch: master
+  remote: https://github.com/cloud66-oss/cloud66-rails.git
+  revision: 2d1b59169c739f80e76ac77ef748852176aa8a92
+  branch: main
   specs:
     cloud66 (0.1.3)
 
