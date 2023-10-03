@@ -1,5 +1,4 @@
-# Dockerfile.production
-FROM ruby:3
+FROM ubuntu:20.04
 MAINTAINER hello@cloud66.com
 
 ENV NODE_ENV production
@@ -11,20 +10,31 @@ ENV RAILS_ENV production
 #RUN addgroup --gid $USER_ID $USER_NAME
 #RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $USER_ID $USER_NAME
 
-RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
-  && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
-  && curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get update -y && \
+    apt-get install -y software-properties-common curl && \
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-add-repository ppa:git-core/ppa && \
+    apt-get update -y && \
+    apt-get install -y git wget build-essential libmysqlclient-dev ruby-mysql2 && \
+    apt-get install -y --no-install-recommends nodejs yarn
 
-RUN apt-get update && apt-get install -y --no-install-recommends nodejs yarn
+RUN wget https://s3.amazonaws.com/downloads.cloud66.com/ruby/binaries/ubuntu/20.04/x86_64/ruby-2.7.4.tar.bz2 && \
+    mkdir -p /usr/local/build && \
+    tar -xjvf ruby-2.7.4.tar.bz2 -C /usr/local/build && \
+    cp -r --remove-destination /usr/local/build/ruby-2.7.4/* /usr/local
 
+ENV PATH=${PATH}:/usr/local/bin
 ENV INSTALL_PATH /app
 RUN mkdir -p $INSTALL_PATH
 WORKDIR $INSTALL_PATH
 
-# ensure bundler is present
-RUN gem install bundler
-
 # install gems
+ARG GITHUB_TOKEN
+COPY git_config /tmp/git_config
+ARG GIT_CONFIG_GLOBAL=/tmp/git_config
+ARG GIT_CONFIG_SYSTEM=/tmp/git_config
 COPY Gemfile* $INSTALL_PATH/
 RUN bundle install --without development test
 
