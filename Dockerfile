@@ -31,7 +31,7 @@ RUN mkdir -p $INSTALL_PATH
 WORKDIR $INSTALL_PATH
 
 # install gems
-ARG GITHUB_TOKEN
+ARG GITHUB_TOKEN="$GITHUB_TOKEN"
 COPY git_config /tmp/git_config
 ARG GIT_CONFIG_GLOBAL=/tmp/git_config
 ARG GIT_CONFIG_SYSTEM=/tmp/git_config
