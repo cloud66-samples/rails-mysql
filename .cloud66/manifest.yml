@@ -4,4 +4,3 @@ rails:
     node_version: "10"
     health_check:
       endpoint: '/cloud66/metrics'
-      follow_redirects: false
