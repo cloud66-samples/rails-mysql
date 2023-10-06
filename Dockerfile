@@ -17,8 +17,7 @@ RUN apt-get update -y && \
     curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-add-repository ppa:git-core/ppa && \
     apt-get update -y && \
-    apt-get install -y git wget build-essential libmysqlclient-dev ruby-mysql2 && \
-    apt-get install -y --no-install-recommends nodejs yarn
+    apt-get install -y git wget build-essential libmysqlclient-dev ruby-mysql2 nodejs yarn vim netcat
 
 RUN wget https://s3.amazonaws.com/downloads.cloud66.com/ruby/binaries/ubuntu/20.04/x86_64/ruby-2.7.4.tar.bz2 && \
     mkdir -p /usr/local/build && \
