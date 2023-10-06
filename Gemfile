@@ -65,7 +65,7 @@ gem "delayed_job", "~> 4.1"
 
 gem "pry"
 
-gem "cloud66", "0.1.6", git: "https://github.com/cloud66-oss/cloud66-rails.git", branch: "main"
+gem "cloud66", "0.1.7", git: "https://github.com/cloud66-oss/cloud66-rails.git", branch: "main"
 
 gem "sneakers", "~> 2.12"
 gem "bunny", "~> 2.22"

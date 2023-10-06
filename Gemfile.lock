@@ -1,9 +1,10 @@
 GIT
   remote: https://github.com/cloud66-oss/cloud66-rails.git
-  revision: 03acd2431b0d651124e8d0a71112e625c304156e
+  revision: b9ae9278dac584ad6a541c42506159c5c6652107
   branch: main
   specs:
-    cloud66 (0.1.6)
+    cloud66 (0.1.7)
+      rails (>= 2.3)
 
 GEM
   remote: https://rubygems.org/
@@ -268,7 +269,7 @@ DEPENDENCIES
   bunny (~> 2.22)
   byebug
   capybara (>= 2.15)
-  cloud66 (= 0.1.6)!
+  cloud66 (= 0.1.7)!
   daemons (~> 1.4, >= 1.4.1)
   delayed_job (~> 4.1)
   delayed_job_active_record (~> 4.1)
