@@ -2,5 +2,3 @@ rails:
   configuration:
     ruby_version: "2.7.4"
     node_version: "10"
-    health_check:
-      endpoint: '/cloud66/metrics'
