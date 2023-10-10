@@ -1,8 +1,0 @@
-[url "https://github.com/cloud66-oss/cloud66-rails"]
-  insteadOf = git@github.com:cloud66-oss/cloud66-rails
-[url "https://github.com/cloud66-oss/cloud66-rails"]
-  insteadOf = git://github.com/cloud66-oss/cloud66-rails
-[credential "https://github.com/cloud66-oss/cloud66-rails.git"]
-  helper = "!f() { sleep 1; echo \"username=x-access-token\"; echo \"password=${GITHUB_TOKEN}\"; }; f"
-[credential "https://github.com/cloud66-oss/cloud66-rails"]
-  helper = "!f() { sleep 1; echo \"username=x-access-token\"; echo \"password=${GITHUB_TOKEN}\"; }; f"
