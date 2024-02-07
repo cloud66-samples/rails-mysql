@@ -1,4 +1,25 @@
-rails:
-  configuration:
-    ruby_version: "2.7.4"
-    node_version: "10"
+production:
+  rails:
+    configuration:
+      ruby_version: 3.3.0
+      operating_system: ubuntu2204
+      asset_pipeline_enabled: false
+      asset_pipeline_precompile: false
+    server:
+      unique_name: dynamicpanther
+      vendor: aws
+      region: ap-southeast-2
+      size: t3a.small
+      root_disk_size: 40
+      availability_zone: ap-southeast-2a
+  postgresql:
+    configuration:
+      version: 16
+    server:
+      same_as: dynamicpanther
+  redis:
+    configuration:
+      version: 7.0.14
+    server:
+      same_as: dynamicpanther
+
