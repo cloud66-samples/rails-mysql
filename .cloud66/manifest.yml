@@ -1,4 +1,20 @@
 production:
+  environment_variables:
+    AF_API_KEY:
+    AF_API_SECRET:
+    API_CF_SECRET:
+    API_PRIMARY_URL: hello
+    API_SECONDARY_URL: hello
+    API_TERTIARY_URL: hello
+    API_QUATERNARY_URL: hello
+    DASHBOARD_PWD:
+    DASHBOARD_UNAME: hello
+    PORTAL_API_URL: hello
+    POSTGRESQL_URL: {{POSTGRESQL_URL_INT}}
+    PROXY_STATIC1_URL: hello
+    PROXY_STATIC2_URL: hello
+    RUBY_YJIT_ENABLE: true
+    SECRET_KEY_BASE:
   rails:
     configuration:
       ruby_version: 3.3.0
@@ -13,6 +29,11 @@ production:
       size: t3a.small
       root_disk_size: 40
       availability_zone: ap-southeast-2a
+      extra_packages:
+        - htop
+        - tmux
+        - iotop
+        - awscli
   mysql:
     server:
       same_as: dynamicpanther
@@ -26,4 +47,3 @@ production:
       version: 7.0.14
     server:
       same_as: dynamicpanther
-
