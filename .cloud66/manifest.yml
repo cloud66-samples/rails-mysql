@@ -8,6 +8,7 @@ production:
     server:
       unique_name: dynamicpanther
       vendor: aws
+      key_name: Images
       region: ap-southeast-2
       size: t3a.small
       root_disk_size: 40
