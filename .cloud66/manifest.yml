@@ -13,6 +13,9 @@ production:
       size: t3a.small
       root_disk_size: 40
       availability_zone: ap-southeast-2a
+  mysql:
+    server:
+      same_as: dynamicpanther
   postgresql:
     configuration:
       version: 16
