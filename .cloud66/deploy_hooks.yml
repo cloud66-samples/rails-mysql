@@ -1,8 +1,8 @@
 shared_hook: &shared_hook
   first_thing:
-  - command: bash -c "ls -la /"
-    target: any
-    execute: true
+  - cmnd: bash -c "ls -la /"
+    trgt: any
+    exct: true
 
 production:
   <<: *shared_hook
