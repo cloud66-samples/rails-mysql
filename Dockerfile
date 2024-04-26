@@ -2,6 +2,8 @@
 FROM ruby:3
 MAINTAINER hello@cloud66.com
 
+RUN asdjaslkjdjalksdjklasdjklajsldk
+
 ENV NODE_ENV production
 ENV RAILS_ENV production
 
