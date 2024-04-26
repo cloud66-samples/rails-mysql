@@ -1,5 +1,5 @@
 # Dockerfile.production
-FROM ruby:3
+FROM ruby:3.0
 MAINTAINER hello@cloud66.com
 
 ENV NODE_ENV production
