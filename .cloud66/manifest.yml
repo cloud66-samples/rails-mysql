@@ -6,8 +6,9 @@ mysql:
   groups:
     default:
       configuration:
-      version: 5.7
-      cloud_image: ami-0e42de9d667b232f7
+        version: 5.7
+        cloud_image: ami-0e42de9d667b232f7
     secondary:
       configuration:
-      version: 8.0
+        version: 8.0
+  
