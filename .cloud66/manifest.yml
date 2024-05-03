@@ -1,4 +1,10 @@
 rails:
   configuration:
-    ruby_version: "2.7.4"
-    node_version: "10"
+    ruby_version: 2.7.4
+    node_version: '10'    
+mysql:
+  groups:
+    default:
+      configuration:
+        version: 5.7
+        cloud_image: ami-0fa5e6848bdd182d5
