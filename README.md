@@ -2,4 +2,4 @@
 
 Basic Rails/MySQL Example Application for use with https://www.cloud66.com
 
-test 3
+test 4
