@@ -1,3 +1,6 @@
+gateway:
+  name: azure_bastion
+  username: azureuser
 rails:
   configuration:
     ruby_version: "2.7.4"
