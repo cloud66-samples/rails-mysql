@@ -1,5 +1,5 @@
 gateway:
-  name: azure_bastion
+  name: azure_gateway_two
   username: azureuser
 rails:
   configuration:
