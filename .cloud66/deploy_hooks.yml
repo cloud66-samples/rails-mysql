@@ -5,3 +5,4 @@ last_thing:
   execute: true
   sudo: false
   run_on: all_servers
+  run_as: cloud66-user
