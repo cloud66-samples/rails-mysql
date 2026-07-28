@@ -1,4 +1,5 @@
 rails:
   configuration:
-    ruby_version: "2.7.4"
-    node_version: "10"
+    ruby_version: "4.0.6"
+    # No Node.js runtime is required: assets are served by Propshaft and
+    # JavaScript is delivered as ESM import maps, so nothing is transpiled.
