@@ -1,0 +1,25 @@
+probe: &probe
+  command: 'echo "PROBE who=$(id -un) home=$HOME stack=$STACK_PATH tag=$CLOUD66_VARIANT_TAG type=$CLOUD66_DEPLOY_TYPE umask=$(umask) gemfile=${BUNDLE_GEMFILE:-unset} agent=${SSH_AUTH_SOCK:-none} ruby=$(command -v ruby) path=$PATH"'
+  target: rails
+  sudo: true
+  execute: true
+
+probe_run_as: &probe_run_as
+  <<: *probe
+  sudo: false
+  run_as: nobody
+
+production:
+  first_thing:
+    - *probe
+    - *probe_run_as
+  after_checkout:
+    - *probe
+  after_bundle:
+    - *probe
+  after_symlink:
+    - *probe
+  before_restart:
+    - *probe
+  last_thing:
+    - *probe
