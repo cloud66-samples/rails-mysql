@@ -44,3 +44,5 @@ bin/ci           # style, security audits and tests, as run in CI
 
 `/up` returns 200 once the app boots cleanly — use it for load balancer and
 uptime checks.
+
+<!-- ENG-1514 staging rollout test: Green variant commit (2026-10-20T14:22:13Z) -->
