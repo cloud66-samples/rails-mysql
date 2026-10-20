@@ -46,3 +46,4 @@ bin/ci           # style, security audits and tests, as run in CI
 uptime checks.
 
 <!-- ENG-1514 staging rollout test: Green variant commit (2026-10-20T14:22:13Z) -->
+<!-- ENG-1514 staging accept-control commit (2026-10-20T14:32:06Z) -->
