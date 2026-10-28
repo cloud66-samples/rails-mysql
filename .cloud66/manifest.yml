@@ -1,5 +1,7 @@
 rails:
   configuration:
-    ruby_version: "4.0.6"
-    # No Node.js runtime is required: assets are served by Propshaft and
-    # JavaScript is delivered as ESM import maps, so nothing is transpiled.
+    ruby_version: "4.0.9"
+    # The app itself needs no Node.js (Propshaft serves the assets and
+    # JavaScript ships as ESM import maps), but Cloud 66 installs Node.js on
+    # Rails servers anyway, so pin the version they get.
+    node_version: "22.23.4"
