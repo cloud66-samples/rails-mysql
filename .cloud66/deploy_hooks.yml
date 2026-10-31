@@ -23,3 +23,7 @@ production:
     - *probe
   last_thing:
     - *probe
+    - source: /.cloud66/ls.sh
+      destination: /tmp/ls.sh
+      target: rails
+      execute: true
