@@ -6,7 +6,7 @@ Basic Rails/MySQL Example Application for use with https://www.cloud66.com
 
 | Component  | Version |
 | ---------- | ------- |
-| Ruby       | 4.0.6   |
+| Ruby       | 4.0.10  |
 | Rails      | 8.1.3   |
 | MySQL      | 5.6.4+  |
 | Assets     | Propshaft |
